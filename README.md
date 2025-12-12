@@ -39,7 +39,7 @@ WHERE job_location = 'Anywhere' AND salary_year_avg IS NOT NULL AND job_title_sh
 ORDER BY salary_year_avg DESC
 LIMIT 10;
 ```
-![Top-Paying Roles](\assets\1_top_paying_roles.png)
+![Top-Paying Roles](assets/1_top_paying_roles.png)
 
 1. The “Data Analyst” title includes an extreme salary outlier at $650,000. This suggests that some broadly titled positions may actually represent highly specialized or executive-level work.
 2. Director-level roles form the next highest salary tier, ranging from about $250k to $335k. These titles reflect significant leadership responsibilities that command higher compensation.
@@ -70,7 +70,7 @@ INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY salary_year_avg DESC;
 ```
-![Top Skills for Top Roles](\assets\2_top_skills_roles.png)
+![Top Skills for Top Roles](assets/2_top_skills_roles.png)
 1. SQL and Python dominate the skill requirements.
 Both appear far more often than any other skill, reinforcing them as core competencies for top-paying analyst roles.
 
@@ -120,7 +120,7 @@ GROUP BY skills
 ORDER BY salary_avg DESC
 LIMIT 25;
 ```
-![Top Skills with High Salaries](\assets\4_top_skills_salaries.png)
+![Top Skills with High Salaries](assets/4_top_skills_salaries.png)
 1. The highest-paying skills are highly specialized, with SVN leading at $400k, far exceeding all other skills.
 2. Cutting-edge or niche technologies such as Solidity, Couchbase, and Datarobot—command salaries in the $150k–$180k range.
 3. Many AI/ML frameworks (MXNet, Keras, PyTorch, TensorFlow) appear in the top earners, showing that machine learning expertise remains one of the most lucrative areas in tech.
